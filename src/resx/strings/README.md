@@ -13,6 +13,6 @@ bazel build //src/core/csharp_binary:hello
 You can then run the application with the following:
 
 ```bash
-./hello.exe
+.\bin\hello.exe
 Hello, world!
 ```
