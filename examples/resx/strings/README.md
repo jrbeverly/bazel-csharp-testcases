@@ -1,18 +1,11 @@
-# csharp_binary base case
+# ResX file with strings
 
-Tests to ensure that building a csharp is building successfully.
+Tests how an application makes use of a ResX file with only strings.
 
 ## Usage
 
 You can build it with the following:
 
 ```bash
-bazel build //src/core/csharp_binary:hello
-```
-
-You can then run the application with the following:
-
-```bash
-.\bin\hello.exe
-Hello, world!
+bazel build //examples/resx/strings:hello
 ```
