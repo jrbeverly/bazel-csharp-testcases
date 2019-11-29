@@ -7,7 +7,7 @@ Tests to ensure that building a csharp is building successfully.
 You can build it with the following:
 
 ```bash
-bazel build //src/core/csharp_binary:hello
+bazel build //src/core/csharp_library:hello
 ```
 
 You can then run the application with the following:
@@ -15,4 +15,5 @@ You can then run the application with the following:
 ```bash
 .\bin\hello.exe
 Hello, world!
+I have 3 apple(s)
 ```
