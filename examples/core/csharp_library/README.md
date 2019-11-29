@@ -1,19 +1,11 @@
-# csharp_binary base case
+# csharp_library base case
 
-Tests to ensure that building a csharp is building successfully.
+Tests that the rule csharp_library can be successfully included into a binary application.
 
 ## Usage
 
 You can build it with the following:
 
 ```bash
-bazel build //src/core/csharp_library:hello
-```
-
-You can then run the application with the following:
-
-```bash
-.\bin\hello.exe
-Hello, world!
-I have 3 apple(s)
+bazel build //examples/core/csharp_library:hello
 ```

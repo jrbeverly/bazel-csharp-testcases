@@ -8,14 +8,19 @@ You can see a forked copy of the bazel rules at [jrbeverly/rules_csharp](https:/
 
 These examples cover the following:
 
-* [core](core/): Minimal example to show the usage of the core rules.
+* [core](core/): Minimal example to test the usage of the core rules.
 
 * [deps](deps/): Dependency trees with the rules.
 
-* [examples](examples/): Example usages of simple real applications.
+* [examples](examples/): Example usages of interesting scenarios.
 
 * [resx](resx/): Edge cases while working with resx files.
 
+You can build all of these examples with the following:
+
+```bash
+bazel build //examples/...
+```
 
 ### Docker Development
 
