@@ -1,18 +1,21 @@
-# csharp_binary base case
+# Diamond Dependency
 
-Tests to ensure that building a csharp is building successfully.
+Tests a scenario where two dependencies rely on a common sub-dependency. This can happen with any low level library (data access, logging, models). This is assuming that they use the same base version of the dependency.
+
+The dependency tree looks something like this:
+
+```markdown
+> Chat Application (hello)
+    > Messaging (services)
+        > Auth Service (auth)
+    > Servers (format)
+        > Auth Service (auth)
+```
 
 ## Usage
 
 You can build it with the following:
 
 ```bash
-bazel build //src/core/csharp_binary:hello
-```
-
-You can then run the application with the following:
-
-```bash
-.\bin\hello.exe
-Hello, world!
+bazel build //examples/deps/diamond:app
 ```
