@@ -21,3 +21,21 @@ These examples cover the following:
 * [examples](src/examples/): Example usages of simple real applications.
 
 * [resx](src/resx/): Edge cases while working with resx files.
+
+
+### Docker Development
+
+A bash script exists for testing out the examples in [linux by docker](docker.bash). Be aware that the compiled binaries will not work on linux (unless .NET Core), and will need to be copied out of the symlinked `bazel-*` directories to be used from windows.
+
+For example:
+
+```bash
+bazel build //src/core/csharp_binary:all
+cp -r bazel-bin/src/core/csharp_binary/bazelout/net472/ bin/
+```
+
+Then from your local windows environment, you can run the executable as such:
+
+```powershell
+.\bin\hello.exe
+```
