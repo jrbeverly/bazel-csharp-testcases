@@ -1,4 +1,4 @@
-name: "Minimal Workspace"
+name: "Rules Usage"
 on:
   push:
     paths:
@@ -17,5 +17,4 @@ jobs:
       - uses: actions/checkout@v1
       - uses: docker://gcr.io/bazel-public/ubuntu1804:java11
         with:
-          entrypoint: /bin/bash
-          args: "cd minimal ; bazel build //..."
+          args: "cd minimal/ && bazel build //..."
