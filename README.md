@@ -32,4 +32,4 @@ csharp_repositories()
 csharp_register_toolchains()
 ```
 
-Or you can consult the minimal example in [minimal/](minimal/).
+Or you can consult the minimal example in [usage/](usage/).

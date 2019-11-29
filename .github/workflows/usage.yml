@@ -1,0 +1,21 @@
+name: "Rules Usage"
+on:
+  push:
+    paths:
+    - usage/*
+    - usage/*/*
+    - usage/*/*/*
+    - usage/*/*/*/*
+    - usage/*/*/*/*/*
+    - .github/workflows/usage.yml
+    - .github/workflows/usage.bash
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: docker://gcr.io/bazel-public/ubuntu1804:java11
+        with:
+          args: "bash .github/workflows/usage.bash"
