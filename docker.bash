@@ -1,0 +1,1 @@
+docker run --rm -it -v "//${PWD}":/workspace --workdir=//workspace gcr.io/bazel-public/ubuntu1804:java11 bash
