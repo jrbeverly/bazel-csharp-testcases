@@ -1,4 +1,4 @@
-name: "Build"
+name: "Minimal Workspace"
 on:
   push:
     paths:
