@@ -3,7 +3,16 @@ on:
   pull_request:
   push:
     branches: master
-
+    paths:
+    - examples/*
+    - examples/*/*
+    - examples/*/*/*
+    - examples/*/*/*/*
+    - examples/*/*/*/*/*
+    - BUILD
+    - WORKSPACE
+    - .github/workflows/usage.yml
+    
 jobs:
   build:
     name: Build
