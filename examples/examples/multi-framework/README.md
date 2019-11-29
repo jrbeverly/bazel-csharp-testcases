@@ -1,18 +1,13 @@
-# csharp_binary base case
+# Multi-Framework Targets
 
-Tests to ensure that building a csharp is building successfully.
+Tests how the application handles multi-framework compilation of a binary target.
+
+**Not working**
 
 ## Usage
 
 You can build it with the following:
 
 ```bash
-bazel build //src/core/csharp_binary:hello
-```
-
-You can then run the application with the following:
-
-```bash
-.\bin\hello.exe
-Hello, world!
+bazel build //examples/examples/multi-framework:hello
 ```
