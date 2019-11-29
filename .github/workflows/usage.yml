@@ -8,6 +8,7 @@ on:
     - usage/*/*/*/*
     - usage/*/*/*/*/*
     - .github/workflows/usage.yml
+    - .github/workflows/usage.bash
 
 jobs:
   build:
