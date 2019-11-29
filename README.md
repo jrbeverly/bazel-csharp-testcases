@@ -1,41 +1,35 @@
-# Tests for Bazel rules_csharp
+# Bazel CSharp Rules Examples
 
-A collection of simple C# programs that are compiled using the bazel rules for csharp.
+## Overview
 
-You can see a forked copy of the bazel rules at [jrbeverly/rules_csharp](https://github.com/jrbeverly/rules_csharp)
+This repository provides a set of usages for the bazel csharp rules. The idea behind these examples is to cover edge cases that are encountered during development, and provide a comprehensive test (& prototype) suite.
 
-## Objectives
+While working on the bazel csharp rules, I have encountered bugs or small quirks that I would like to encode records of. Some of these are very minor details, so I felt it would work best to have them as an external repository.
 
-While working on the bazel csharp rules, I have come up with a couple test cases that don't fit in with the rules_csharp repository (at the moment), so I want to have a separate repository where I can commit and test the usages. Much like how an actual third party would work with the bazel rules.
+I defined the idea behind each program [here](docs/criteria.md).
 
-You can review the requirements for all of these programs [here](docs/criteria.md).
+## Setup
 
-## Getting started
+If you'd like to test the rules in your own repository, you can add the following to your `WORKSPACE` file to add the external repositories:
 
-These examples cover the following:
+```python
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-* [core](src/core/): Minimal example to show the usage of the core rules.
+http_archive(
+    name = "d2l_rules_csharp",
+    strip_prefix = "rules_csharp-0.6",
+    urls = ["https://github.com/Brightspace/rules_csharp/archive/v0.6.tar.gz"],
+)
 
-* [deps](src/deps/): Dependency trees with the rules.
+load(
+    "@d2l_rules_csharp//csharp:defs.bzl",
+    "csharp_register_toolchains",
+    "csharp_repositories",
+)
 
-* [examples](src/examples/): Example usages of simple real applications.
+csharp_repositories()
 
-* [resx](src/resx/): Edge cases while working with resx files.
-
-
-### Docker Development
-
-A bash script exists for testing out the examples in [linux by docker](docker.bash). Be aware that the compiled binaries will not work on linux (unless .NET Core), and will need to be copied out of the symlinked `bazel-*` directories to be used from windows.
-
-For example:
-
-```bash
-bazel build //src/core/csharp_binary:all
-cp -r bazel-bin/src/core/csharp_binary/bazelout/net472/ bin/
+csharp_register_toolchains()
 ```
 
-Then from your local windows environment, you can run the executable as such:
-
-```powershell
-.\bin\hello.exe
-```
+Or you can consult the minimal example in [minimal/](minimal/).
