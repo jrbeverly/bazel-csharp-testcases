@@ -1,8 +1,8 @@
-# Dependency Chain
+# Chained Dependencies
 
-Tests to ensure that building a csharp is building successfully.
+Tests a chained dependency. You might see something like this in a web application where each layer builds ontop of the next (models, data access, services, application).
 
-The chain is linear as such:
+The dependency tree looks something like this:
 
 ```markdown
 > Application (hello)
@@ -16,12 +16,5 @@ The chain is linear as such:
 You can build it with the following:
 
 ```bash
-bazel build //src/deps/chain:hello
-```
-
-You can then run the application with the following:
-
-```bash
-.\bin\hello.exe
-Hello, world!
+bazel build //examples/deps/chain:hello
 ```
