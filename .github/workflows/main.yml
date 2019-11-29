@@ -11,7 +11,7 @@ on:
     - examples/*/*/*/*/*
     - BUILD
     - WORKSPACE
-    - .github/workflows/usage.yml
+    - .github/workflows/main.yml
     
 jobs:
   build:
