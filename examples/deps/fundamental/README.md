@@ -2,6 +2,8 @@
 
 Tests to ensure that building a csharp is building successfully.
 
+Idea of a dependency that everything relies on a single file. You might see this in an application that relies on Newtonsoft.Json (or utility function used by this). (Also logging / base models)
+
 ## Usage
 
 You can build it with the following:

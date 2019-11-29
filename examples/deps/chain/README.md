@@ -1,6 +1,15 @@
-# csharp_binary base case
+# Dependency Chain
 
 Tests to ensure that building a csharp is building successfully.
+
+The chain is linear as such:
+
+```markdown
+> Application (hello)
+    > Web Services (services)
+        > Data Access (data)
+            > Models (model)
+```
 
 ## Usage
 
