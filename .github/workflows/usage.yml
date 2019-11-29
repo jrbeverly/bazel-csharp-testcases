@@ -2,12 +2,12 @@ name: "Rules Usage"
 on:
   push:
     paths:
-    - minimal/*
-    - minimal/*/*
-    - minimal/*/*/*
-    - minimal/*/*/*/*
-    - minimal/*/*/*/*/*
-    - .github/workflows/minimal.yml
+    - usage/*
+    - usage/*/*
+    - usage/*/*/*
+    - usage/*/*/*/*
+    - usage/*/*/*/*/*
+    - .github/workflows/usage.yml
 
 jobs:
   build:
@@ -17,4 +17,4 @@ jobs:
       - uses: actions/checkout@v1
       - uses: docker://gcr.io/bazel-public/ubuntu1804:java11
         with:
-          args: "cd minimal/ && bazel build //..."
+          args: "bash -c 'cd usage/ && bazel build //...'"
