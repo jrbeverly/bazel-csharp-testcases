@@ -11,11 +11,15 @@ http_archive(
     #   https://github.com/jrbeverly/rules_csharp/commits/master
     # to list the commit for each of the branches (or pin a branch)
 
-    # master
-    strip_prefix = "rules_csharp-a31980f706ef71e571bbd4f1e34d9ba8adf3decd",
-    urls = [
-        "https://github.com/jrbeverly/rules_csharp/archive/a31980f706ef71e571bbd4f1e34d9ba8adf3decd.tar.gz",
-    ],
+    # version pin
+    strip_prefix = "rules_csharp-0.6",
+    urls = ["https://github.com/Brightspace/rules_csharp/archive/v0.6.tar.gz"],
+
+    # # master
+    # strip_prefix = "rules_csharp-a31980f706ef71e571bbd4f1e34d9ba8adf3decd",
+    # urls = [
+    #     "https://github.com/jrbeverly/rules_csharp/archive/a31980f706ef71e571bbd4f1e34d9ba8adf3decd.tar.gz",
+    # ],
 
     # # resgen/compile-resx-files
     # strip_prefix = "rules_csharp-a31980f706ef71e571bbd4f1e34d9ba8adf3decd",
