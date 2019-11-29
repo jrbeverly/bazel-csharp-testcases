@@ -19,7 +19,7 @@ These examples cover the following:
 
 ### Docker Development
 
-A bash script exists for testing out the examples in [linux by docker](docker.bash). Be aware that the compiled binaries will not work on linux (unless .NET Core), and will need to be copied out of the symlinked `bazel-*` directories to be used from windows.
+A bash script exists for testing out the examples in [linux by docker](../docker.bash). Be aware that the compiled binaries will not work on linux (unless .NET Core), and will need to be copied out of the symlinked `bazel-*` directories to be used from windows.
 
 For example:
 
