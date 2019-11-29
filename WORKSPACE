@@ -12,8 +12,8 @@ http_archive(
     # to list the commit for each of the branches (or pin a branch)
 
     # version pin
-    strip_prefix = "rules_csharp-0.6",
-    urls = ["https://github.com/Brightspace/rules_csharp/archive/v0.6.tar.gz"],
+    # strip_prefix = "rules_csharp-0.6",
+    # urls = ["https://github.com/Brightspace/rules_csharp/archive/v0.6.tar.gz"],
 
     # # master
     # strip_prefix = "rules_csharp-a31980f706ef71e571bbd4f1e34d9ba8adf3decd",
@@ -32,6 +32,12 @@ http_archive(
     # urls = [
     #     "https://github.com/jrbeverly/rules_csharp/archive/ad39050ba88f2ff0002f51be7ec2eb389b519fe6.tar.gz",
     # ],
+
+    # proto/resx-as-macro
+    strip_prefix = "rules_csharp-fc3863501e115f299d50240174d2c4b519a86565",
+    urls = [
+        "https://github.com/jrbeverly/rules_csharp/archive/fc3863501e115f299d50240174d2c4b519a86565.tar.gz",
+    ],
 )
 
 load(
