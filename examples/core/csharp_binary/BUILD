@@ -6,5 +6,5 @@ load(
 csharp_binary(
     name = "hello",
     srcs = ["hello.cs"],
-    target_frameworks = ["net472"],
+    target_frameworks = ["netcoreapp3.0"],
 )
