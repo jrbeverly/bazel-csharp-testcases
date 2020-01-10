@@ -1,9 +1,10 @@
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
-http_archive(
+git_repository(
     name = "d2l_rules_csharp",
-    strip_prefix = "rules_csharp-0.6",
-    urls = ["https://github.com/Brightspace/rules_csharp/archive/v0.6.tar.gz"],
+    commit = "228ca0f66ef494cc9b5483f6fb2e7cdf3eb3c875",
+    remote = "https://github.com/jrbeverly/rules_csharp.git",
+    shallow_since = "1578695831 -0500",
 )
 
 load(
