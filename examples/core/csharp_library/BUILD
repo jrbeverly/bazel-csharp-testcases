@@ -8,11 +8,11 @@ csharp_binary(
     name = "hello",
     srcs = ["hello.cs"],
     deps = [":lib"],
-    target_frameworks = ["net472"],
+    target_frameworks = ["netcoreapp3.0"],
 )
 
 csharp_library(
     name = "lib",
     srcs = ["lib.cs"],
-    target_frameworks = ["net472"],
+    target_frameworks = ["netcoreapp3.0"],
 )
