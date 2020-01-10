@@ -1,4 +1,4 @@
-workspace(name = "csharp_examples")
+workspace(name = "rules_csharp_examples")
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
