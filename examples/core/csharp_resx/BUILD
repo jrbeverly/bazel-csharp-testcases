@@ -8,7 +8,7 @@ csharp_binary(
     name = "hello",
     srcs = glob(["*.cs"]),
     resources = [":Hello.Strings"],
-    target_frameworks = ["net472"],
+    target_frameworks = ["netcoreapp3.0"],
     deps = ["@net//:System.Linq"],
 )
 
