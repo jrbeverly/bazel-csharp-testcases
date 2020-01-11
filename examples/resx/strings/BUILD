@@ -6,12 +6,9 @@ load(
 
 csharp_binary(
     name = "hello",
-    srcs = [
-        "Strings.Designer.cs",
-        "hello.cs",
-    ],
+    srcs = glob(["*.cs"]),
     resources = [":Hello.Strings"],
-    target_frameworks = ["net472"],
+    target_frameworks = ["netcoreapp3.0"],
     deps = ["@net//:System.Linq"],
 )
 
