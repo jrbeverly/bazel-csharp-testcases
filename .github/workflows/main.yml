@@ -21,4 +21,4 @@ jobs:
       - uses: actions/checkout@v1
       - uses: docker://gcr.io/cloud-marketplace-containers/google/bazel
         with:
-          args: "bazel build //..."
+          args: "build //..."
