@@ -19,6 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: docker://gcr.io/bazel-public/ubuntu1804:java11
+      - uses: docker://gcr.io/cloud-marketplace-containers/google/bazel
         with:
           args: "bazel build //..."
