@@ -1,0 +1,23 @@
+{
+  "slug": "bazel-csharp-testcases",
+  "namespace": "jrbeverly",
+  "status": "archived",
+  "icon": "icon.svg",
+  "license": {
+    "type": "MIT",
+    "content": "Jonathan Beverly <jrbeverly>"
+  },
+  "topics": [
+    "bazel",
+    "csharp",
+    "dotnet",
+    "rules-csharp"
+  ],
+  "languages": [
+    "C#",
+    "Dockerfile",
+    "Makefile",
+    "Python",
+    "Shell"
+  ]
+}
