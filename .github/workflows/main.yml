@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: docker://gcr.io/bazel-public/ubuntu1804:java11
+      - name: Setup Bazel
+        uses: abhinavsingh/setup-bazel@v3
         with:
-          args: "bazel build //..."
+          version: 3.5.0
+      - name: Bazel Build
+        run: bazel build //...
