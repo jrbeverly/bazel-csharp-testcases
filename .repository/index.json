@@ -17,7 +17,7 @@
     "C#",
     "Dockerfile",
     "Makefile",
-    "Python",
-    "Shell"
+    "Shell",
+    "Starlark"
   ]
 }
