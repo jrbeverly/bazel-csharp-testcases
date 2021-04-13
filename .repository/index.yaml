@@ -1,0 +1,17 @@
+slug: bazel-csharp-testcases
+description: A collection of example usages of rules_csharp for development purposes
+project: workbench
+namespace:
+status: archived
+icon: icon.svg
+license:
+  type: MIT
+  content: Jonathan Beverly <jrbeverly>
+  year: 2019
+topics: |-
+  [
+    "bazel",
+    "csharp",
+    "dotnet",
+    "rules-csharp"
+  ]
